@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var myArrow: MyArrow!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        myArrow = MyArrow()
+        myArrow.frame = CGRect(x: 100, y: 200, width: 120, height: 100)
+        self.view.addSubview(myArrow)
+        myArrow.setNeedsDisplay()
     }
 
 
